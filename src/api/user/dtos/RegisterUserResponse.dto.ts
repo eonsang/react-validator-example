@@ -9,4 +9,8 @@ export class RegisterUserResponseDto {
 
   @IsString()
   lastName: string;
+
+  get fullName(): string {
+    return this.firstName + this.lastName;
+  }
 }

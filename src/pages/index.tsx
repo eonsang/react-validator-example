@@ -4,8 +4,6 @@ import { useMutation } from '@tanstack/react-query';
 import { registerUser } from '../api/user/userAPI';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { ErrorMessage } from '@hookform/error-message';
-import { plainToInstance } from 'class-transformer';
-import { validateOrReject } from 'class-validator';
 import { plainToInstanceWithValidate } from '../utils/plainToInstanceWithValidate';
 
 export default function Home() {
@@ -23,7 +21,7 @@ export default function Home() {
       return registerUser(body);
     },
     onSuccess(response) {
-      console.log('onSuccess', response);
+      alert(response?.fullName);
     },
     onError(error) {
       console.log(error);
