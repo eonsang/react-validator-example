@@ -21,6 +21,7 @@ export default function Home() {
       return registerUser(body);
     },
     onSuccess(response) {
+      console.log(response);
       alert(response?.fullName);
     },
     onError(error) {
