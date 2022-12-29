@@ -56,7 +56,7 @@ export default function Home() {
           <br />
           <input
             defaultValue=''
-            placeholder='email'
+            placeholder='lastName'
             {...register('lastName')}
             type={'lastName'}
           />

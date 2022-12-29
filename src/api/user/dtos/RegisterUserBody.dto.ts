@@ -2,17 +2,17 @@ import { Exclude } from 'class-transformer';
 import { IsInt, IsString, Max, Min, MinLength } from 'class-validator';
 
 export class RegisterUserBodyDto {
-  @IsString()
   @MinLength(3)
+  @IsString()
   firstName: string;
 
-  @IsString()
   @MinLength(3)
+  @IsString()
   lastName: string;
 
   @Exclude({ toPlainOnly: true })
-  @IsString()
   @MinLength(6)
+  @IsString()
   fullName: string;
 
   @Min(14, { message: '최소 14세 이상만 사용 가능합니다.' })
